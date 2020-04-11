@@ -1,0 +1,641 @@
+/* свойства для всех элементов - * */
+* {
+  /* для того чтоб правильно вышитывались высота и ширина каждого элемента */
+  box-sizing: border-box;
+}
+
+body {
+  /* шрифт Roboto */
+  font-family: "Roboto", sans-serif;
+  padding-top: 44px;
+  /* Внутренний отступ с верху */
+  padding-top: 44px;
+}
+
+.container {
+  /* Макс ширина страницы */
+  max-width: 1200px;
+  /* Для того чтоб контейнер находился всегда по центру страницы */
+  margin: auto;
+}
+/* стили к шапке сайта "header" */
+.header {
+  display: flex;
+  /* Для того чтоб элементы находидись относительно друг от друга по вертикали по центру */
+  align-items: center;
+  /* Для того чтоб раскидать элементы по краям и чтоб было между ними одинаковое расстояние*/
+  justify-content: space-between;
+  /* Отступ снизу */
+  margin-bottom: 40px;
+}
+
+/* стили для классов input - чтоб не повторять постоянно */
+.input {
+  /* фон - белый */
+  background: white;
+  /* цвет границы */
+  border: 1px solid #d9d9d9;
+  /* скругление границ */
+  border-radius: 2px;
+  /* размер шрифта */
+  font-size: 16px;
+  /* высота строки */
+  line-height: 24px;
+  /* отступ 8px */
+  padding: 8px;
+  /* отступ слева 30px */
+  padding-left: 35px;
+  /* для того чтоб картинка не повторялась */
+  background-repeat: no-repeat;
+  /* для того чтоб изображение находилось слева и отступало на 11 px и по центру */
+  background-position: left 11px center;
+}
+/* Стили для строки поиска адресов*/
+.input-addres {
+  /* для того чтоб строка занимала 80% свободного места и
+   уменьшалась при сужении экрана работате с - @media */
+  flex: 0.8;
+  /* вставка картинки */
+  background-image: url(../img/home.svg);
+}
+/* Стили для строки поиска блюд и ресторанов*/
+.input-search {
+  /* ширина строки */
+  width: 300px;
+  background-image: url(../img/search.svg);
+  /* для того чтоб в основном окне иеню стояло с право*/
+  margin-left: auto;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+/* стиль для кнопок */
+.button {
+  /* отступы - сверху 8px по краям 16px */
+  padding: 8px 16px;
+  /* заливка */
+  background: white;
+  /* границы */
+  border: 1px solid #d9d9d9;
+  /* для того чтоб правильно выщитывалась высота и ширина каждого элемента */
+  box-sizing: border-box;
+  /* тень */
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015);
+  /* скругление грпниц */
+  border-radius: 2px;
+  /* цвет шрифта */
+  color: #595959;
+  /* размер шрифта */
+  font-size: 16px;
+  /* высота строки */
+  line-height: 24px;
+}
+/* стили кнопке войти */
+.button-primary {
+  /* цвет фона */
+  background: #1890ff;
+  /* граница */
+  border: 1px solid #1890ff;
+  /* цвет шрифта */
+  color: white;
+}
+/* стили картинке в кнопке */
+.button-icon {
+  /* отступ текста от картинки с права */
+  margin-right: 6px;
+}
+/* отступ картинки в кнопке в окне оесторан */
+.button-card-text {
+  margin-right: 10px;
+}
+
+/* Стили для промо */
+.promo {
+  /* тень */
+  box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
+  /* заливка и вставка картинки выравнивание по верхнему правому краю сдвиг с верху -100.  сдвиг с права / ширина */
+  background: #fff1b8 url(../img/promo-image.png) no-repeat top -100px right -300px /
+    924px;
+  /* скругление границы */
+  border-radius: 10px;
+  /* отступы - сверху 68px по краям 70px */
+  padding: 68px 70px;
+  /* Отступ снизу */
+  margin-bottom: 56px;
+}
+/* Стиль на текст для класса promo-title */
+.promo-title {
+  /* чтоб не было курсива */
+  font-style: normal;
+  /* чтоб был жирный текст */
+  font-weight: bold;
+  /* размер текста */
+  font-size: 39px;
+  /* высота строки */
+  line-height: 46px;
+  /* цвет текста */
+  color: #302c34;
+}
+/* Стиль на текст для класса promo-text */
+.promo-text {
+  /* чтоб не было курсива */
+  font-style: normal;
+  /* чтоб не был жирный текст */
+  font-weight: normal;
+  /* размер текста */
+  font-size: 24px;
+  /* высота строки */
+  line-height: 24px;
+  /* цвет текста */
+  color: #302c34;
+  /* максимальная ширина */
+  max-width: 538px;
+}
+
+.main {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 0) 1.04%,
+    #f5f5f5 100%
+  );
+}
+
+.section-heading {
+  display: flex;
+  /* Для того чтоб элементы находидись относительно друг от друга по вертикали по центру */
+  align-items: center;
+  /* отступ снизу 45 px */
+  margin-bottom: 45px;
+}
+.sectiont-title {
+  /* чтоб не было курсива */
+  font-style: normal;
+  /* чтоб не был жирный текст */
+  font-weight: bold;
+  /* размер текста */
+  font-size: 36px;
+  /* высота строки */
+  line-height: 42px;
+  /* отключение отступов */
+  margin: 0;
+  /* цвет текста */
+  color: black;
+  /* отступ с право */
+  margin-right: 30px;
+}
+/* стиль к cards */
+.cards {
+  display: flex;
+  /* Для того чтоб элементы находидись относительно друг от друга по вертикали */
+  align-items: flex-start;
+  /* если элементы не помещаются то они переносятся на новую строчку */
+  flex-wrap: wrap;
+  /* Для того чтоб раскидать элементы по краям и чтоб было между ними одинаковое расстояние*/
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* стиль ко всем карточкам */
+.card {
+  background: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+  /* скругление элементов выходящих за пределы рамки */
+  overflow: hidden;
+  /* отступ снизу на 30px */
+  margin-bottom: 30px;
+  /* задает базовый размер флекс элемента по основной оси 
+  (относительно контейнеров) в данный момент работает с запросом @media */
+  flex-basis: 31%;
+  /* убирает цвет у ссылки */
+  text-decoration: none;
+}
+/* стиль к card-image */
+.card-image {
+  /* ширина */
+  width: 384px;
+  /* высота */
+  height: 250px;
+  /* для того чтоб если у другой картинки была другая длина и ширина чтоб она обрезалась автоматически */
+  overflow: cover;
+}
+/* стиль к card-text */
+.card-text {
+  /* отступы */
+  /* с сверху */
+  padding-top: 20px;
+  /* снизу */
+  padding-bottom: 35px;
+  /* по краям */
+  padding-right: 23px;
+  padding-left: 23px;
+}
+.card-heading {
+  display: flex;
+  /* Для того чтоб элементы находидись относительно друг от друга по вертикали  по центру*/
+  align-items: center;
+  /* Для того чтоб раскидать элементы по краям и чтоб было между ними одинаковое расстояние*/
+  justify-content: space-between;
+}
+
+/* стили к названию заведения */
+.card-title {
+  margin: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/* стиль к названию в окне ресторан */
+.card-title-reg {
+  font-weight: 400;
+}
+
+/* стили к времени */
+.card-tag {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: white;
+  background: black;
+  border-radius: 2px;
+  /* внутренние отступы */
+  padding: 1px 8px;
+}
+
+/* стили к информации */
+.card-info {
+  display: flex;
+  /* Для того чтоб элементы находидись относительно друг от друга по вертикали  по центру*/
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.card-price-bold {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+  margin-left: 30px;
+}
+
+/* стиль для рейтинга */
+.rating {
+  /* отступ c справа */
+  padding-right: 26px;
+  color: #ffc107;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+}
+/* свойства для прайса и категорий */
+.price,
+.category {
+  color: #8c8c8c;
+  font-size: 18px;
+  line-height: 32px;
+}
+/* свойства для прайса */
+.price {
+  /* отступ с права */
+  margin-right: 10px;
+}
+
+/* стиль для ingredients */
+.ingredients {
+  color: #8c8c8c;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.category {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /* запрет перенос строк */
+  white-space: nowrap;
+  max-width: 150px;
+}
+
+/* псевдо элемент для прайса - чтоб была точка */
+.price:after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #8c8c8c;
+  /* чтоб был строчно блочным */
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  /* отступ относительно левого края 10px */
+  margin-left: 10px;
+}
+
+/* стили для подвала */
+.footer {
+  /* отступы с верху/с низу 60 по краям 0 */
+  padding: 60px 0px;
+}
+
+.footer-block {
+  display: flex;
+  /* Для того чтоб элементы находидись относительно друг от друга по вертикали по центру */
+  align-items: center;
+  /* Для того чтоб раскидать элементы по краям и чтоб было между ними одинаковое расстояние*/
+  justify-content: space-between;
+}
+
+/* меню */
+.footer-nav {
+  /* отступ с лева */
+  margin-left: 35px;
+  /* авто отступ с права */
+  margin-right: auto;
+}
+
+/* стили для ссылок в меню */
+.footer-link {
+  /* чтоб был строчно блочным */
+  display: inline-block;
+  color: #595959;
+  /* для того чтоб убрать нижнее подчеркивание у ссылок */
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration: none;
+}
+/* свойство для всех .footer-link - кроме последнего */
+.footer-link:not(:last-child) {
+  /* отступ с права */
+  margin-right: 15px;
+}
+
+/* стили для ссылок соц сетей */
+.social-links {
+  display: flex;
+  /* Для того чтоб элементы находидись относительно друг от друга по вертикали по центру */
+  align-items: center;
+  /* Для того чтоб раскидать элементы по краям и чтоб было между ними одинаковое расстояние*/
+}
+/* стили для каждой ссылки соц сетей кроме последней */
+.social-link:not(:last-child) {
+  /* отступ с права */
+  margin-right: 21px;
+}
+
+/* адоптация сайта */
+/* если экран до и меньше  1366px 
+(если у пользователя ноут)*/
+@media (max-width: 1366px) {
+  /* то мы уменьшим контейнер на 960 px*/
+  .container {
+    max-width: 960px;
+  }
+  /* адобтация картинки */
+  .promo {
+    background-position: center right -300px;
+    background-size: 750px;
+  }
+}
+
+/* до и меньше  992 px */
+@media (max-width: 992px) {
+  /* то мы уменьшим контейнер на 750 px*/
+  .container {
+    max-width: 750px;
+  }
+  .promo {
+    /* отступы */
+    padding: 50px;
+    /* размер картинки */
+    background-size: 500px;
+    background-position: center right -200px;
+  }
+  .promo-text {
+    font-size: 18px;
+    max-width: 400px;
+  }
+  .card {
+    /* базовая ширина карточек */
+    flex-basis: 49%;
+  }
+  /* размер текста в подвале */
+  .footer-link {
+    font-size: 16px;
+  }
+}
+
+/* до и меньше 768 px */
+@media (max-width: 768px) {
+  /* то мы уменьшим контейнер на 560 px*/
+  .container {
+    max-width: 560px;
+  }
+  /* возможность переносить текст на новую строчку */
+  .card-info {
+    flex-wrap: wrap;
+  }
+  .card .rating {
+    flex-basis: 100%;
+  }
+  .card-title {
+    font-size: 18px;
+  }
+  .promo {
+    background-size: 400px;
+    background-position: bottom right -200px;
+  }
+  .promo-title {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .promo-text {
+    margin-top: 0;
+  }
+}
+
+/* до и меньше 578 px */
+@media (max-width: 578px) {
+  /* то ширина будет до 90% px*/
+  .container {
+    width: 90%;
+  }
+  .header {
+    /* перенос элемента который не помещается*/
+    flex-wrap: wrap;
+  }
+  .input-addres {
+    /* отступ с верху */
+    margin-top: 10px;
+    /* чтоб строка поиска адресов была по счету последней и перенеслась */
+    order: 5;
+    /* для того чтоб растянуть на всю ширину */
+    flex: 1;
+  }
+  .promo {
+    /* убрать картинку */
+    background-image: none;
+  }
+  .promo-title {
+    margin-bottom: 10px;
+  }
+  .sectiont-title {
+    font-size: 20px;
+  }
+  /* карточки */
+  .card {
+    /* на всю ширину */
+    flex-basis: 100%;
+  }
+  .card-image {
+    /* картинку на всю ширину */
+    width: 100%;
+  }
+
+  .footer {
+    padding: 30px 0;
+  }
+
+  .footer-block {
+    /* для того чтоб все выравнивалось по верхней части */
+    align-items: flex-start;
+  }
+
+  /* подвал сайта */
+  .footer-nav {
+    /* отступы */
+    margin-left: 0;
+    /* перемешение элементов (1-м будет) */
+    order: 0;
+  }
+
+  .footer-logo {
+    /* отступ с права */
+    margin-right: 20px;
+    /* перемешение элементов (2-м будет) */
+    order: 1;
+  }
+
+  .social-links {
+    /* перемешение элементов (3-м будет) */
+    order: 3;
+  }
+}
+/* до и меньше 506 px */
+@media (max-width: 506px) {
+  /* то ширина будет до 90% px*/
+  .container {
+    width: 90%;
+  }
+  .header {
+    /* перенос элемента который не помещается*/
+    flex-wrap: wrap;
+  }
+  .input-addres {
+    /* отступ с верху */
+    margin-top: 10px;
+    /* чтоб строка поиска адресов была по счету последней и перенеслась */
+    order: 5;
+    /* для того чтоб растянуть на всю ширину */
+    flex: 1;
+  }
+  .promo {
+    /* убрать картинку */
+    background-image: none;
+  }
+  .promo-title {
+    margin-bottom: 10px;
+  }
+  .sectiont-title {
+    font-size: 20px;
+  }
+  /* карточки */
+  .card {
+    /* на всю ширину */
+    flex-basis: 100%;
+  }
+  .card-image {
+    /* картинку на всю ширину */
+    width: 100%;
+  }
+
+  .footer {
+    padding: 30px 0;
+  }
+
+  .footer-block {
+    /* для того чтоб все выравнивалось по верхней части */
+    align-items: flex-start;
+  }
+
+  /* подвал сайта */
+  .footer-nav {
+    /* отступы */
+    margin-left: 0;
+    margin-right: 0;
+    /* перемешение элементов (1-м будет) */
+    order: 0;
+    /* для того чтоб выранивание было столбец */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    /* отступ с права */
+    margin-right: 20px;
+    /* перемешение элементов (2-м будет) */
+    order: 1;
+  }
+
+  .social-links {
+    /* перемешение элементов (3-м будет) */
+    order: 3;
+  }
+}
+/* до и меньше 462 px */
+@media (max-width: 462px) {
+  /* перенос строки - поиск блюд если не будет помещатся */
+  .promo {
+    padding: 20px;
+  }
+  .section-heading {
+    flex-wrap: wrap;
+  }
+
+  .footer-block {
+    /* перенос элементов которые не помещаются */
+    flex-wrap: wrap;
+    /* чтоб все выстроилось в колонку */
+    flex-direction: column;
+    /* выравнивание по центру */
+    align-items: center;
+  }
+  .footer-logo {
+    order: 0;
+    /* отступ снизу */
+    margin-bottom: 20px;
+  }
+  .footer-nav {
+    /* отступ снизу */
+    margin-bottom: 20px;
+    /* чтоб текст был по центру */
+    text-align: center;
+  }
+  /* для того чтоб убрать отступ с права 
+  с свойство для всех .footer-link - кроме последнего */
+  .footer-link:not(:last-child) {
+    margin-right: 0;
+  }
+}
