@@ -605,6 +605,41 @@ body {
   }
 }
 /* до и меньше 462 px */
+@media (max-width: 461px) {
+  /* перенос строки - поиск блюд если не будет помещатся */
+  .promo {
+    padding: 20px;
+  }
+  .section-heading {
+    flex-wrap: wrap;
+  }
+
+  .footer-block {
+    /* перенос элементов которые не помещаются */
+    flex-wrap: wrap;
+    /* чтоб все выстроилось в колонку */
+    flex-direction: column;
+    /* выравнивание по центру */
+    align-items: center;
+  }
+  .footer-logo {
+    order: 0;
+    /* отступ снизу */
+    margin-bottom: 20px;
+  }
+  .footer-nav {
+    /* отступ снизу */
+    margin-bottom: 20px;
+    /* чтоб текст был по центру */
+    text-align: center;
+  }
+  /* для того чтоб убрать отступ с права 
+  с свойство для всех .footer-link - кроме последнего */
+  .footer-link:not(:last-child) {
+    margin-right: 0;
+  }
+}
+/* до и меньше 462 px */
 @media (max-width: 462px) {
   /* перенос строки - поиск блюд если не будет помещатся */
   .promo {
@@ -637,5 +672,43 @@ body {
   с свойство для всех .footer-link - кроме последнего */
   .footer-link:not(:last-child) {
     margin-right: 0;
+  }
+}
+/* до и меньше 462 px */
+@media (max-width: 462px) {
+  /* перенос строки - поиск блюд если не будет помещатся */
+  .promo {
+    padding: 20px;
+  }
+  .section-heading {
+    flex-wrap: wrap;
+  }
+
+  .footer-block {
+    /* перенос элементов которые не помещаются */
+    flex-wrap: wrap;
+    /* чтоб все выстроилось в колонку */
+    flex-direction: column;
+    /* выравнивание по центру */
+    align-items: center;
+  }
+  .footer-logo {
+    order: 0;
+    /* отступ снизу */
+    margin-bottom: 20px;
+  }
+  .footer-nav {
+    /* отступ снизу */
+    margin-bottom: 20px;
+    /* чтоб текст был по центру */
+    text-align: center;
+  }
+  /* для того чтоб убрать отступ с права 
+  с свойство для всех .footer-link - кроме последнего */
+  .footer-link:not(:last-child) {
+    margin-right: 0;
+  }
+  .input-search {
+    width: 100%;
   }
 }
